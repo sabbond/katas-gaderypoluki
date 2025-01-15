@@ -17,7 +17,7 @@ public class Gaderypoluki
         return new String(outChars);
     }
 
-    public string Decode(string input){
+    public static string Decode(string input){
         // there is no difference, just swap the pairs again!
         return Encode(input);
     }
