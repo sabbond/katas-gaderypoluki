@@ -1,8 +1,6 @@
-﻿using System.Text;
+﻿namespace gaderypoluki;
 
-namespace gaderypoluki;
-
-public class Gaderypoluki
+public static class Gaderypoluki
 {
     // this class is gonna treat chars like they are runes
     // nothing in gederypoluki is anywhere near the codepoints that require 32 bits
@@ -51,5 +49,4 @@ public class Gaderypoluki
             default: return input;
         }
     }
-
 }

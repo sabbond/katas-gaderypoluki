@@ -4,7 +4,7 @@ using FluentAssertions;
 [TestClass]
 public class gaderypolukiTest
 {
-        public static IEnumerable<object[]> TestData
+    public static IEnumerable<object[]> TestData
     {
         get
         {
@@ -72,17 +72,67 @@ public class gaderypolukiTest
                 ]
             ];
         }
-    }    
+    }
+
+    public static IEnumerable<object[]> Test2Data
+    {
+        get
+        {
+            return
+            [
+                [
+                    "ABCD",
+                    "agedyropulik",
+                    "GBCE",
+                    "test 1 from web 2"
+                ],
+                [
+                    "Ala has a cat",
+                    "gaderypoluki",
+                    "Gug hgs g cgt",
+                    "test 2 from web 2"
+                ],
+                [
+                    "Dkucr pu yhr ykbir",
+                    "politykarenu",
+                    "Dance on the table",
+                    "test 3 from web 2"
+                ],
+                [
+                    "Hmdr nge brres",
+                    "regulaminowy",
+                    "Hide our beers",
+                    "test 4 from web 2"
+                ]
+            ];
+        }
+    }
+
 
     [TestMethod]
     [DynamicData(nameof(TestData))]
-    public void Gaderypoluki_EncodeReturnsExpectedResults(string input, string expected, string scenario){
+    public void Gaderypoluki_EncodeReturnsExpectedResults(string input, string expected, string scenario)
+    {
         Gaderypoluki.Encode(input).Should().BeEquivalentTo(expected, scenario);
     }
 
     [TestMethod]
     [DynamicData(nameof(TestData))]
-    public void Gaderypoluki_DecodeReturnsExpectedResults(string input, string expected, string scenario){
+    public void Gaderypoluki_DecodeReturnsExpectedResults(string input, string expected, string scenario)
+    {
         Gaderypoluki.Decode(input).Should().BeEquivalentTo(expected, scenario);
+    }
+
+    [TestMethod]
+    [DynamicData(nameof(TestData))]
+    public void Gaderypoluki2_EncodeReturnsExpectedResults(string input, string expected, string scenario)
+    {
+        Gaderypoluki2.Encode(input, "gaderypoluki").Should().BeEquivalentTo(expected, scenario);
+    }
+
+    [TestMethod]
+    [DynamicData(nameof(Test2Data))]
+    public void Gaderypoluki2_EncodeReturnsExpectedResultsWithDifferentKeys(string input, string key, string expected, string scenario){
+        Gaderypoluki2.Encode(input, key).Should().BeEquivalentTo(expected, scenario);
     }
 }
