@@ -30,21 +30,13 @@ public static class Gaderypoluki3
                 }
             }
         }
-        // if no lookups found short circuit and return empty string
-        // means we can expect .First to work and not throw
-        if (keys.Count == 0) return String.Empty;
         // invalid input could give us more than one mapping per character
-        // should validate keys before returning it
-        var prevLookup = string.Empty;
-        foreach (var key in keys)
-        {
-            if (key[..1] == prevLookup)
-            {
-                throw new ArgumentException($"inconsistent data, multiple mappings for {prevLookup}");
-            }
-            prevLookup = key[..1];
+        // validate keys before return
+        var key = String.Concat(keys.OrderBy(key => key));
+        // if any letter appears more than once then the key is invalid
+        if (key.GroupBy(c => c).Any(g => g.Count() > 1)) {
+            throw new ArgumentException("Inconsistent mappings in data, key invalid");
         }
-        // ok, data is consistent, emit the keys in alpha order
-        return String.Concat(keys.OrderBy(key => key));
+        return key;
     }
 }
