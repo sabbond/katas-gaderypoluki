@@ -103,6 +103,18 @@ public class gaderypolukiTest
                     "regulaminowy",
                     "Hide our beers",
                     "test 4 from web 2"
+                ],
+                [
+                    "I epn'𐐷 wgn𐐷 𐐷p 𐐷guk gbpl𐐷 i𐐷",
+                    "agedyropult𐐷",
+                    "I don't want to talk about it",
+                    "test 4 from web 2"
+                ],
+                [
+                    "Hmdr ng𐐷 brr𐐷s",
+                    "r𐐷gulaminowy",
+                    "Hid𐐷 our b𐐷𐐷rs",
+                    "test 4 from web 2"
                 ]
             ];
         }
