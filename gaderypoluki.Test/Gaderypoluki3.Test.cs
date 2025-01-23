@@ -21,8 +21,8 @@ public class Gaderypoluki3Test
                     "akerilnuopty"
                 ],
                 [
-                    new string[] {"THE QUICK BROWN FOX jumps over the LAZY BOY"},
-                    new string[] {"UHC QTNEO BYKWI FKX jtaps kvcy uhc LMZR BKR"},
+                    new string[] {"THE QUICK BROWN FOX jumps over the LAZY DOG"},
+                    new string[] {"UHC QTNEO BYKWI FKX jtaps kvcy uhc LMZR DKG"},
                     "amceinkorytu"
                 ]
             ];

@@ -108,13 +108,13 @@ public class gaderypolukiTest
                     "I epn'𐐷 wgn𐐷 𐐷p 𐐷guk gbpl𐐷 i𐐷",
                     "agedyropult𐐷",
                     "I don't want to talk about it",
-                    "test 4 from web 2"
+                    "Map to a 2 char rune"
                 ],
                 [
                     "Hmdr ng𐐷 brr𐐷s",
-                    "r𐐷gulaminowy",
+                    "𐐷rgulaminowy",
                     "Hid𐐷 our b𐐷𐐷rs",
-                    "test 4 from web 2"
+                    "Map from a 2 char rune"
                 ]
             ];
         }
